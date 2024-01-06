@@ -1,0 +1,48 @@
+{
+  "name": "ts-eslint-base",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "postinstall": "npx simple-git-hooks",
+    "build": "rollup --config=rollup.config.ts --configPlugin rollup-plugin-esbuild",
+    "build:tsc": "tsc",
+    "lint": "eslint . --ext .js,.js,.mjs,.cjs,.ts,.mts,.cts --cache --fix --ignore-path .gitignore",
+    "start": "ts-node src/index.ts"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "^6.1.0",
+    "@rushstack/eslint-patch": "^1.6.1",
+    "@tsconfig/recommended": "1.0.3",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint": "^8.56.0",
+    "lint-staged": "^15.2.0",
+    "rollup": "^4.9.4",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.0",
+    "simple-git-hooks": "^2.9.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,mjs,cjs,ts,mts,cts}": [
+      "eslint --cache --fix"
+    ]
+  }
+}
