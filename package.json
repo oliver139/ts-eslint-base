@@ -8,7 +8,7 @@
     "build:tsc": "tsc",
     "lint:check": "eslint . --cache",
     "lint": "eslint . --cache --fix",
-    "start": "ts-node src/index.ts"
+    "start": "tsx src/index.ts"
   },
   "keywords": [],
   "author": "Oliver Mak",
@@ -34,9 +34,9 @@
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-esbuild": "^6.1.1",
     "simple-git-hooks": "^2.11.1",
-    "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "tslib": "^2.6.3",
+    "tsx": "^4.19.2",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.0"
   },
