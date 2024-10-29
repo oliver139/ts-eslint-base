@@ -1,6 +1,6 @@
 {
   "name": "ts-eslint-base",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "scripts": {
     "postinstall": "npx simple-git-hooks",
@@ -10,15 +10,12 @@
     "lint": "eslint . --cache --fix",
     "start": "ts-node src/index.ts"
   },
-  "engines": {
-    "node": "20"
-  },
   "keywords": [],
-  "author": "",
+  "author": "Oliver Mak",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/oliver139/ts-eslint-base"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
