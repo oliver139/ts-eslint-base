@@ -3,7 +3,7 @@ import stylistic from "@stylistic/eslint-plugin";
 import tseslint from "typescript-eslint";
 
 export default [
-  { files: ["**/*.{js,mjs,cjs,ts,mts,cts,vue}"] },
+  { ignores: ["dist", "fixtures"] },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
