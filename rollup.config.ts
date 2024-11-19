@@ -10,12 +10,12 @@ export default [
       {
         dir: "dist",
         format: "cjs",
-        sourcemap: true,
+        sourcemap: false,
       },
       {
         dir: "dist",
         format: "esm",
-        sourcemap: true,
+        sourcemap: false,
       },
     ],
     plugins: [
@@ -35,12 +35,8 @@ export default [
         format: "cjs",
       },
       {
-        file: "dist/index.d.mts",
-        format: "esm",
-      },
-      {
         file: "dist/index.d.ts",
-        format: "es",
+        format: "esm",
       },
     ],
     plugins: [dts({
