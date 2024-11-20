@@ -5,8 +5,6 @@ Linter will automatically run upon `git commit`.
 
 ## Project Setup
 
-PNPM with node 18.18.2 is used.
-
 ```sh
 pnpm install
 ```
@@ -33,4 +31,5 @@ pnpm build:tsc
 
 ```sh
 pnpm lint
+pnpm lint:check # Check only
 ```
