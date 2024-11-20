@@ -8,12 +8,12 @@ export default [
     input: "src/index.ts",
     output: [
       {
-        dir: "dist",
+        file: "dist/index.cjs",
         format: "cjs",
         sourcemap: false,
       },
       {
-        dir: "dist",
+        file: "dist/index.js",
         format: "esm",
         sourcemap: false,
       },
