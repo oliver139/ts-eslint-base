@@ -1,6 +1,8 @@
 {
   "name": "ts-eslint-base",
+  "type": "module",
   "version": "1.0.2",
+  "packageManager": "pnpm@9.13.2",
   "description": "",
   "author": "Oliver Mak",
   "license": "MIT",
@@ -9,23 +11,35 @@
     "url": "https://github.com/oliver139/ts-eslint-base"
   },
   "keywords": [],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "bin",
     "dist"
   ],
   "scripts": {
     "build": "rollup --config=rollup.config.ts --configPlugin rollup-plugin-esbuild",
-    "build:tsc": "tsc",
-    "lint:check": "eslint . --cache",
     "lint": "eslint . --cache --fix",
+    "lint:check": "eslint . --cache",
+    "lint:inspect": "eslint --inspect-config",
     "start": "tsx src/index.ts",
-    "prepare": "simple-git-hooks"
+    "prepare": "simple-git-hooks",
+    "prepack": "nr build",
+    "release": "bumpp && pnpm publish"
   },
   "devDependencies": {
+    "@antfu/ni": "^0.23.1",
     "@oliver139/eslint-config": "^1.0.3",
     "@rollup/plugin-json": "^6.1.0",
     "@tsconfig/recommended": "1.0.8",
     "@types/node": "^22.9.1",
+    "bumpp": "^9.8.1",
     "eslint": "^9.15.0",
     "lint-staged": "^15.2.10",
     "rollup": "^4.27.3",
