@@ -1,6 +1,6 @@
 # ts-eslint-base
 
-A well setup template for starting a typescript project. Used rollup as project bundler.  
+A well setup template for starting a typescript project. Used rollup as project bundler.
 Linter will automatically run upon `git commit`.
 
 ## Project Setup
