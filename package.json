@@ -30,6 +30,7 @@
     "lint:check": "eslint . --cache",
     "lint:inspect": "eslint --inspect-config",
     "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
     "prepare": "simple-git-hooks",
     "prepack": "nr build",
     "release": "bumpp && pnpm publish"
