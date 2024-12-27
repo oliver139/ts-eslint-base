@@ -8,12 +8,12 @@ export default [
     input: "src/index.ts",
     output: [
       {
-        file: "dist/index.cjs",
+        dir: "dist/cjs",
         format: "cjs",
         sourcemap: false,
       },
       {
-        file: "dist/index.js",
+        dir: "dist/esm",
         format: "esm",
         sourcemap: false,
       },
@@ -31,17 +31,18 @@ export default [
     input: "src/index.ts",
     output: [
       {
-        file: "dist/index.d.cts",
+        file: "dist/cjs/index.d.cts",
         format: "cjs",
       },
       {
-        file: "dist/index.d.ts",
+        file: "dist/esm/index.d.ts",
         format: "esm",
       },
     ],
     plugins: [dts({
       // https://github.com/Swatinem/rollup-plugin-dts/issues/143
       compilerOptions: { preserveSymlinks: false },
+      respectExternal: true,
     })],
   },
 ];
