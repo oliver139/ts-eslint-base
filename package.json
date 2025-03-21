@@ -58,8 +58,6 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js,mjs,cjs,ts,mts,cts}": [
-      "eslint --cache --fix"
-    ]
+    "*": "eslint --fix"
   }
 }
