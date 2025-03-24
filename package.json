@@ -1,7 +1,7 @@
 {
   "name": "ts-eslint-base",
   "type": "module",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "packageManager": "pnpm@10.6.5",
   "description": "",
   "author": "Oliver Mak",
@@ -33,7 +33,8 @@
     "dev": "tsx watch src/index.ts",
     "prepare": "simple-git-hooks",
     "prepack": "nr build",
-    "release": "bumpp && pnpm publish"
+    "release": "bumpp && pnpm publish",
+    "analyze": "nlx node-modules-inspector"
   },
   "devDependencies": {
     "@antfu/ni": "^24.3.0",
