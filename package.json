@@ -25,6 +25,7 @@
     "dist"
   ],
   "scripts": {
+    "initialize": "git reset $(git commit-tree \"HEAD^{tree}\" -m \"Initialize\")",
     "build": "rollup --config=rollup.config.ts --configPlugin rollup-plugin-esbuild",
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --cache --fix",
