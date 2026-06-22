@@ -1,3 +1,4 @@
-import eslintConfig from '@oliver139/eslint-config'
+import antfu from '@antfu/eslint-config'
+import oli from '@oliver139/eslint-config'
 
-export default eslintConfig()
+export default antfu(...oli())

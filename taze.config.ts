@@ -13,6 +13,6 @@ export default defineConfig({
   },
   packageMode: {
     '@types/node': 'minor',
-    'typescript': 'minor',
+    typescript: 'minor',
   },
 })
