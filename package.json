@@ -2,7 +2,6 @@
   "name": "ts-eslint-base",
   "type": "module",
   "version": "2.0.3",
-  "packageManager": "pnpm@10.6.5",
   "description": "",
   "author": "Oliver Mak",
   "license": "MIT",
@@ -12,21 +11,17 @@
   },
   "keywords": [],
   "exports": {
-    ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.cjs"
-    }
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/esm/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
+  "types": "./dist/index.d.mts",
   "files": [
     "bin",
     "dist"
   ],
   "scripts": {
     "initialize": "git reset $(git commit-tree \"HEAD^{tree}\" -m \"Initialize\")",
-    "build": "rollup --config=rollup.config.ts --configPlugin rollup-plugin-esbuild",
+    "build": "tsdown --clean --dts",
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --cache --fix",
     "lint:inspect": "eslint --inspect-config",
@@ -40,19 +35,13 @@
   "devDependencies": {
     "@antfu/ni": "^24.3.0",
     "@oliver139/eslint-config": "^2.1.1",
-    "@rollup/plugin-json": "^6.1.0",
     "@tsconfig/recommended": "1.0.8",
     "@types/node": "^22.13.12",
     "bumpp": "^10.1.0",
     "eslint": "^9.23.0",
-    "lint-staged": "^15.5.0",
-    "rollup": "^4.37.0",
-    "rollup-plugin-delete": "^3.0.1",
-    "rollup-plugin-dts": "^6.2.1",
-    "rollup-plugin-esbuild": "^6.2.1",
     "simple-git-hooks": "^2.12.1",
-    "tsconfig-paths": "^4.2.0",
-    "tslib": "^2.8.1",
+    "tsdown": "^0.22.3",
+    "tsdown-stale-guard": "^0.1.2",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2"
   },
