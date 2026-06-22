@@ -33,17 +33,19 @@
     "analyze": "nlx node-modules-inspector"
   },
   "devDependencies": {
-    "@antfu/ni": "^24.3.0",
+    "@antfu/ni": "^30.1.0",
     "@oliver139/eslint-config": "^2.1.1",
-    "@tsconfig/recommended": "1.0.8",
-    "@types/node": "^22.13.12",
-    "bumpp": "^10.1.0",
+    "@tsconfig/recommended": "1.0.13",
+    "@types/node": "^22.19.21",
+    "bumpp": "^11.1.0",
     "eslint": "^9.23.0",
-    "simple-git-hooks": "^2.12.1",
+    "npm-check-updates": "^22.2.7",
+    "simple-git-hooks": "^2.13.1",
+    "taze": "^19.14.1",
     "tsdown": "^0.22.3",
     "tsdown-stale-guard": "^0.1.2",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.2"
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
