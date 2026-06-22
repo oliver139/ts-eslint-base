@@ -19,6 +19,26 @@
     "bin",
     "dist"
   ],
+  "engines": {
+    "node": "^24.17.0",
+    "runtime": {
+      "name": "node",
+      "version": "^24.17.0",
+      "onFail": "download"
+    }
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24.17.0",
+      "onFail": "download"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.5.0",
+      "onFail": "warn"
+    }
+  },
   "scripts": {
     "initialize": "git reset $(git commit-tree \"HEAD^{tree}\" -m \"Initialize\")",
     "build": "tsdown --clean --dts",
@@ -32,11 +52,12 @@
     "release": "bumpp && pnpm publish",
     "analyze": "nlx node-modules-inspector"
   },
+  "dependencies": {},
   "devDependencies": {
     "@antfu/ni": "^30.1.0",
     "@oliver139/eslint-config": "^2.1.1",
     "@tsconfig/recommended": "1.0.13",
-    "@types/node": "^22.19.21",
+    "@types/node": "^24.13.2",
     "bumpp": "^11.1.0",
     "eslint": "^9.23.0",
     "npm-check-updates": "^22.2.7",
